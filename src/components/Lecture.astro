@@ -1,0 +1,40 @@
+---
+interface Props {
+	title: string;
+	url_pdf: string;
+    url_diapo?: string
+    title_diapo?: string
+    youtube?: string
+    github?: string
+}
+
+const { title, url_pdf, url_diapo, title_diapo ,youtube, github } = Astro.props;
+---
+
+<a href={url_pdf} target="_blank">{title}</a> 
+
+{title_diapo && <span> / </span> <a href={url_diapo} target="_blank">{title_diapo}</a>}
+
+{youtube && <span>et sur</span> <a href={youtube} target="_blank"><i class="fa fa-youtube-play youtube-icon"></i></a>}
+
+{github && <a href={github} target="_blank"><i class="fa fa-github github-icon"></i></a>}
+
+<style>
+.youtube-icon {
+    font-size: 20px;
+    color: #e84d45;
+    vertical-align: middle;
+}
+
+.github-icon {
+    font-size: 20px;
+    color: #333333;
+    vertical-align: middle;
+}
+</style>
+
+<style>
+    a {
+        color: #3D86C2
+    }
+    </style>

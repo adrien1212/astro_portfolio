@@ -1,0 +1,184 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageTitle from '../components/Title.astro'
+import Lecture from '../components/Lecture.astro'
+import SubTitle from '../components/SubTitle.astro'
+import LecturesBloc from '../components/LecturesBloc.astro';
+
+
+const designPatterns = [
+    {
+        "title": "Patron Visiteur et type dynamique",
+        "url_pdf": "/resources/patron_visiteur.pdf",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "",
+        "github": ""
+    },
+    {
+        "title": "Patron Commande",
+        "url_pdf": "/resources/patron_commande.pdf",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "",
+        "github": ""
+    },
+    {
+        "title": "Patron Stratégie",
+        "url_pdf": "/resources/patron_strategie.pdf",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "https://youtu.be/6O6u9o2z3s8",
+        "github": ""
+    },
+    {
+        "title": "Patron Etat (State)",
+        "url_pdf": "/resources/patron_etat.pdf",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "https://youtu.be/7N8fE4sV8js",
+        "github": ""
+    }
+]
+
+const architecture =  [
+    {
+        "title": "Une des utilités des interfaces",
+        "url_pdf": "/resources/interface_utilite.pdf",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "https://youtu.be/mA8Dxelmj6Y",
+        "github": ""
+    },
+    {
+        "title": "L'injection de dépendances",
+        "url_pdf": "/resources/injection_dependance.pdf",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "https://youtu.be/9RpuF24fYsU",
+        "github": ""
+    },
+    {
+        "title": "A quoi servent les DTOs ?",
+        "url_pdf": "/resources/dto.pdf",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "https://youtu.be/763CrL5UexQ",
+        "github": ""
+    },
+    {
+        "title": "La désignation chainée",
+        "url_pdf": "/resources/designation_chainee.pdf",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "",
+        "github": ""
+    },
+    {
+        "title": "Architecture MVC détaillée (issu d'un cours en préparation)",
+        "url_pdf": "/resources/mvc_en_detail.pdf",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "",
+        "github": ""
+    }
+]
+
+const solid = [
+    {
+        "title": "Une des utilités des interfaces",
+        "url_pdf": "/resources/interface_utilite.pdf",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "https://youtu.be/mA8Dxelmj6Y",
+        "github": ""
+    },
+    {
+        "title": "Single Responsability",
+        "url_pdf": "/resources/srp.pdf",
+        "title_diapo": "Single Responsability",
+        "url_diapo": "/resources/srp_diapo.pdf",
+        "youtube": "https://youtu.be/Awmnk62AjAY",
+        "github": ""
+    },
+    {
+        "title": "Dependencies inversion",
+        "url_pdf": "/resources/inversion_dependance.pdf",
+        "title_diapo": "Dependencies inversion",
+        "url_diapo": "/resources/Dependencies_inversion_diapo.pdf",
+        "youtube": "https://youtu.be/RVRrQDuuv5M",
+        "github": ""
+    }
+]
+
+const test = [
+    {
+        "title": "Ecrire des tests avec Java et Spock",
+        "url_pdf": "/resources/spock.pdf",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "",
+        "github": ""
+    }
+]
+
+const spring = [
+    {
+        "title": "[Livre] Créer une application d'entreprise (en rédaction)",
+        "url_pdf": "https://adrien1212.github.io/Spring-livre/",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "",
+        "github": ""
+    },
+    {
+        "title": "Spring Boot : créer une application d'entreprise",
+        "url_pdf": "/resources/spring.pdf",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "https://youtu.be/L17DACu3qog",
+        "github": "https://github.com/adrien1212/SpringBoot-cours"
+    },
+    {
+        "title": "Spring Security : l'authentification Basic",
+        "url_pdf": "",
+        "title_diapo": "",
+        "url_diapo": "",
+        "youtube": "https://youtu.be/iWlLXhdqp-U",
+        "github": "https://github.com/adrien1212/SpringSecurity-cours/tree/BasicAuth"
+    }
+]
+
+
+---
+
+<Layout title="Lectures", description="Lectures" />
+
+<main class="container px-5 py-30 mx-auto">    
+    <div class="container px-5 py-24 mx-auto text-lg">
+        <PageTitle title="Lectures" />
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 mt-10">
+            <div>
+                <LecturesBloc title="Patrons de conception", lecturesList={designPatterns} />
+            </div>
+            <div>
+                <LecturesBloc title="Principes d'architecture", lecturesList={architecture} />
+            </div>
+
+            <div>
+                <LecturesBloc title="Principes SOLID", lecturesList={solid} />
+            </div>
+            <div></div>
+
+            <div>
+                <LecturesBloc title="Tests logiciel", lecturesList={test} />
+            </div>
+            <div>
+                <LecturesBloc title="Spring", lecturesList={spring} />
+            </div>
+        </div>
+
+       
+    </div>
+</main>

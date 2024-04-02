@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SubTitle from '../components/SubTitle.astro'
+import LastArticlesSimple from '../components/LastArticlesSimple.astro';
+import YoutubeCaption from '../components/YoutubeCaption.astro';
+---
+
+<Layout title="Welcome to Adrien Caubel's website", description="mon website">
+	
+<main class="relative overflow-hidden bg-white dark:bg-gray-800">
+    <div class="relative h-screen flex pt-40">
+        <div class="container font-mono relative flex flex-col justify-between mx-auto">
+            <div class="flex flex-col">
+                <p class="my-6 text-3xl text-center dark:text-white">
+                    Hi, I&#x27;m Adrien
+                </p>
+                <h2 class="max-w-3xl py-2 mx-auto text-5xl font-bold text-center text-gray-800 md:text-6xl dark:text-white">
+                    Software Engineer <span class="text-4xl">and aspire to become architect</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+	<div class="relative h-screen">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-screen-lg mx-auto">
+			<div class="px-8">
+				<SubTitle title="Latest Articles" />
+				<LastArticlesSimple />
+			</div>
+			<div class="px-8">
+				<SubTitle title="Popular Courses" />
+				<YoutubeCaption />
+			</div>
+		</div>
+
+		<div class="relative h-80">
+			<div class="grid grid-cols-1 md:grid-cols-3 items-center justify-center mt-4 px-8 gap-x-20 max-w-72 md:max-w-screen-lg mx-auto text-center">
+				<a href="https://adriencaubel.substack.com/" target="_blank" class="px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 dark:text-gray-800 dark:bg-white hover:dark:bg-gray-100 dark:text-white hover:bg-gray-800 hover:text-white text-md">
+					ALL ARTICLES
+				</a>
+				<a href="/lectures/" class="px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 dark:text-gray-800 dark:bg-white hover:dark:bg-gray-100 dark:text-white hover:bg-gray-800 hover:text-white text-md">
+					ALL COURSES
+				</a>
+				<a href="/aboutme/" class="px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 dark:text-gray-800 dark:bg-white hover:dark:bg-gray-100 dark:text-white hover:bg-gray-800 hover:text-white text-md">
+					CONNECT WITH ME
+				</a>
+			</div>
+		</div>
+	</div>
+
+	
+</main>
+</Layout>
+
+<style>
+	main {
+		margin-top: 3em;
+	}
+</style>

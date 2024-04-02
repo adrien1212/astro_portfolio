@@ -1,0 +1,20 @@
+---
+import SubTitle from "./SubTitle.astro"
+import Lecture from "./Lecture.astro"
+
+interface Props {
+    title: string
+    lecturesList: Lecture[]
+}
+
+const { title, lecturesList } = Astro.props;
+
+---
+
+<SubTitle title={title}/>
+<ul class="list-disc list-inside">
+    {lecturesList.map((item => 
+        <li><Lecture title={item.title}, url_pdf={item.url_pdf}, title_diapo={item.title_diapo}, url_diapo={item.url_diapo}, youtube={item.youtube}, github={item.github} /></li>
+    ))}
+</ul>
+
