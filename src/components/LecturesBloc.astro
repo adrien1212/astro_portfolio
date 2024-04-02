@@ -2,6 +2,16 @@
 import SubTitle from "./SubTitle.astro"
 import Lecture from "./Lecture.astro"
 
+interface Lecture {
+	title: string;
+	url_pdf: string;
+    url_diapo?: string
+    title_diapo?: string
+    youtube?: string
+    github?: string
+}
+
+
 interface Props {
     title: string
     lecturesList: Lecture[]
