@@ -8,7 +8,7 @@ import SubTitle from '../components/SubTitle.astro'
 <Layout title="About Me", description="About Me" />
 
 <main class="container max-w-screen-lg py-30 mx-auto text-lg">
-    <div id="text-part" class="container pt-24 mx-auto">
+    <div id="text-part" class="h-screen container pt-24 mx-auto">
         <PageTitle title="How can I help you ?"/>
 
         <div class="grid grid-cols-1 px-6 sm:max-lg:justify-items-center justify-center md:grid-cols-2 gap-is-4 pt-12">
@@ -30,61 +30,63 @@ import SubTitle from '../components/SubTitle.astro'
             </div>
         </div>
     </div>
-    <div id="studies-part" class="container px-6 pt-24 mx-auto">
-        <SubTitle title="Field of Studies and Expertises ?" />
-        <div class="bordure"></div>
-        <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-is-2">
-            <div>
-                <ul class="max-w-md space-y-1 list-disc list-inside">
-                    <li>Software engineering</li>
-                    <li>Enterprise Application Architecture</li>
-                    <li>Software testing</li>
-                    <li>Model-driven engineering</li>
-                </ul><br>
-            </div>
-            <div>
-                <ul class="max-w-md space-y-1 list-disc list-inside">
-                    <li>Middleware</li>
-                    <li>Concurrent system</li>
-                </ul><br>
-            </div>
-            <div>
-                <ul class="max-w-md space-y-1 list-disc list-inside">
-                    <li>Machine Learning</li>
-                    <li>BigData</li>
-                    <li>Operations research</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div id="skills-part" class="container px-6 mx-auto">
-        <div class="mt-6">
-            <SubTitle title="Technical skills" />
-            <div class="grid grid-cols-3 gap-is-2">
+    <div class="h-screen">
+        <div id="studies-part" class="container px-6 mx-auto">
+            <SubTitle title="Field of Studies and Expertises ?" />
+            <div class="bordure"></div>
+            <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-is-2">
                 <div>
                     <ul class="max-w-md space-y-1 list-disc list-inside">
-                        <li>Java, JEE, Spring</li>
-                        <li>Maven</li>
-                        <li>UML, BPMN</li>
+                        <li>Software engineering</li>
+                        <li>Enterprise Application Architecture</li>
+                        <li>Software testing</li>
+                        <li>Model-driven engineering</li>
+                    </ul><br>
+                </div>
+                <div>
+                    <ul class="max-w-md space-y-1 list-disc list-inside">
+                        <li>Middleware</li>
+                        <li>Concurrent system</li>
+                    </ul><br>
+                </div>
+                <div>
+                    <ul class="max-w-md space-y-1 list-disc list-inside">
+                        <li>Machine Learning</li>
+                        <li>BigData</li>
+                        <li>Operations research</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="text-network" class="container px-6 mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-4 items-center justify-center mt-4 px-8 gap-x-20 max-w-72 md:max-w-screen-lg mx-auto text-center">
-            <a href="/resources/cv-fr.pdf" class="font-black px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 hover:bg-gray-800 hover:text-white text-md">
-                FR
-            </a>
-            <a href="/resources/cv-en.pdf" class="font-black px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 hover:bg-gray-800 hover:text-white text-md">
-                EN
-            </a>
-            <a href="https://www.linkedin.com/in/adriencaubel" target="_blank" class="px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 hover:bg-gray-800 hover:text-white text-md">
-                <i class="text-2xl fa fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/adrien1212" target="_blank" class="px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 hover:bg-gray-800 hover:text-white text-md">
-                <i class="text-2xl fa fa-github"></i>
-            </a>
+        <div id="skills-part" class="container px-6 mx-auto">
+            <div class="mt-6">
+                <SubTitle title="Technical skills" />
+                <div class="grid grid-cols-3 gap-is-2">
+                    <div>
+                        <ul class="max-w-md space-y-1 list-disc list-inside">
+                            <li>Java, JEE, Spring</li>
+                            <li>Maven</li>
+                            <li>UML, BPMN</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="text-network" class="container px-6 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 items-center justify-center mt-4 px-8 gap-x-20 max-w-72 md:max-w-screen-lg mx-auto text-center">
+                <a href="/resources/cv-fr.pdf" class="font-black px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 hover:bg-gray-800 hover:text-white text-md">
+                    FR
+                </a>
+                <a href="/resources/cv-en.pdf" class="font-black px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 hover:bg-gray-800 hover:text-white text-md">
+                    EN
+                </a>
+                <a href="https://www.linkedin.com/in/adriencaubel" target="_blank" class="px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 hover:bg-gray-800 hover:text-white text-md">
+                    <i class="text-2xl fa fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/adrien1212" target="_blank" class="px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 hover:bg-gray-800 hover:text-white text-md">
+                    <i class="text-2xl fa fa-github"></i>
+                </a>
+            </div>
         </div>
     </div>
 </main>
