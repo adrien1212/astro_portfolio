@@ -1,10 +1,25 @@
 ---
-const response = await fetch('https://adriencaubel.substack.com/api/v1/posts/?limit=5', {
+    let articles: any[] = []
+    const response = await fetch('https://adriencaubel.substack.com/api/v1/posts/?limit=5', {
     headers: {
       'Content-Type': 'application/json',
     }});
+    try {
+        articles = await response.json();
+    } catch(e) {
+        console.log(response.body)
+        console.log(e)
+    }    
 
-const articles = await response.json();
+declare global {
+  interface Window {
+    SubstackFeedWidget: {
+      substackUrl: string;
+      posts: number;
+      hidden: string[];
+    };
+  }
+}
 ---
 <section class="text-gray-600">
     {articles.map((article: { canonical_url: string | URL | null | undefined; postTags: { name: unknown; }[]; title: unknown; }) => (
@@ -17,4 +32,17 @@ const articles = await response.json();
             </div> 
         </a>
     ))}
+    <div id="substack-feed-embed"></div>
+
 </section>
+
+
+
+<script>
+    window.SubstackFeedWidget = {
+        substackUrl: "adriencaubel.substack.com",
+        posts: 5,
+        hidden: ["image", "author", "subtitle"]
+    };
+</script>
+<script src="https://substackapi.com/embeds/feed.js" async></script>
