@@ -6,7 +6,7 @@ const videos = await response.json();
 <!-- {videos.error && videos.error.code ? ( -->
 
 {videos.error && videos.error.code ? (
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/L17DACu3qog?si=xKVSykBSlNL4zYI_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="420" height="236" src="https://www.youtube.com/embed/L17DACu3qog?si=xKVSykBSlNL4zYI_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   ) : (
     <section class="text-gray-600">
         {videos.items.map((video: { id: { videoId: any; }; snippet: { thumbnails: { medium: { url: string | null | undefined; }; }; title: unknown; }; }) => (
