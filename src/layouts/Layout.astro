@@ -1,4 +1,5 @@
 ---
+import { Schema } from "astro-seo-schema";
 import Header from "../components/Header.astro"
 
 interface Props {
@@ -20,7 +21,34 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://substackapi.com">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<!-- <script src="https://substackapi.com/embeds/feed.js" async></script> -->
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "WebSite",
+				"url": "https://adriencaubel.fr",
+				"name": "Adrien CAUBEL",
+				"description": "Software Engineer, Blogger, YouTuber and Part-time teacher",
+				"potentialAction": {
+					"@type": "SearchAction",
+					"target": "https://adriencaubel.fr/search?q={search_term_string}",
+					"query-input": "required name=search_term_string"
+				},
+				"hasPart": [
+					{
+					"@type": "WebPage",
+					"url": "https://adriencaubel.fr/aboutme.html",
+					"name": "About Me",
+					"description": "Can we work together ?"
+					},
+					{
+					"@type": "WebPage",
+					"url": "https://adriencaubel.fr/courses.html",
+					"name": "Courses",
+					"description": "All courses"
+					}
+				]
+			}
+		</script>
 	</head>
 	<body class="min-h-screen">
 		<Header />
