@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageTitle from '../components/Title.astro'
+import SubTitle from '../components/SubTitle.astro'
+
+---
+
+<Layout title="About Me", description="Learn more about me, and why not work together" />
+
+<main class="relative max-w-screen-lg py-30 mx-auto text-lg">
+    <div id="text-part" class="container pt-24 mx-auto">
+        <div class="px-6">
+            <PageTitle title="How can I help you ?"/>
+        </div>
+        <div class="grid grid-cols-1 px-6 sm:max-lg:justify-items-center justify-center md:grid-cols-2 gap-is-4 pt-12">
+            <div class="flex align-center max-w-90 max-h-90">
+                <img
+                src="../resources/noirblanc2.jpg"
+                draggable="false"
+                alt="profile-photo"
+              />
+            </div>
+            <div class="mt-12 md:mt-0">
+                <SubTitle title="A brief introduction" />
+                <div class="text-justify">
+                With a Master's degree in Computer Science and a specialization in <strong>modeling</strong> and <strong>testing</strong>, I have gained a deep understanding of <strong>software engineering</strong>. I also benefited from an international mobility program that enabled me to broaden my horizons and develop my skills in <strong>Machine Learning</strong> and <strong>Big-Data</strong>.
+                <br><br>
+                Having had the privilege of receiving a quality education myself, I understand the importance of training future generations of learners.
+            <strong>Since September 2023, I have been teaching</strong> the "Intégration et performance des Systèmes d'Information" course at the university. </div>
+            </div>
+        </div>
+    </div>
+    <div class="relative mt-24 pb-48">
+        <div id="studies-part" class="container mt-8 lg:mt-0 px-6 mx-auto">
+            <SubTitle title="Field of Studies and Expertises ?" />
+            <div class="bordure"></div>
+            <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-is-2">
+                <div>
+                    <ul class="max-w-md space-y-1 list-disc list-inside">
+                        <li>Software engineering</li>
+                        <li>Enterprise Application Architecture</li>
+                        <li>Software testing</li>
+                        <li>Model-driven engineering</li>
+                    </ul><br>
+                </div>
+                <div>
+                    <ul class="max-w-md space-y-1 list-disc list-inside">
+                        <li>Middleware</li>
+                        <li>Concurrent system</li>
+                    </ul><br>
+                </div>
+                <div>
+                    <ul class="max-w-md space-y-1 list-disc list-inside">
+                        <li>Machine Learning</li>
+                        <li>BigData</li>
+                        <li>Operations research</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="skills-part" class="container px-6 mx-auto">
+            <div class="mt-6">
+                <SubTitle title="Technical skills" />
+                <div class="grid grid-cols-3 gap-is-2">
+                    <div>
+                        <ul class="max-w-md space-y-1 list-disc list-inside">
+                            <li>Java, JEE, Spring</li>
+                            <li>Maven</li>
+                            <li>UML, BPMN</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="text-network" class="container px-6 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 items-center justify-center mt-4 px-8 gap-x-20 max-w-72 md:max-w-screen-lg mx-auto text-center">
+                <a href="/resources/cv-fr.pdf" class="font-black px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 hover:bg-gray-800 hover:text-white text-md">
+                    FR
+                </a>
+                <a href="/resources/cv-en.pdf" class="font-black px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 hover:bg-gray-800 hover:text-white text-md">
+                    EN
+                </a>
+                <a href="https://www.linkedin.com/in/adriencaubel" target="_blank" class="px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 hover:bg-gray-800 hover:text-white text-md">
+                    <i class="text-2xl fa fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/adrien1212" target="_blank" class="px-4 py-2 my-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 md:mt-16 hover:bg-gray-800 hover:text-white text-md">
+                    <i class="text-2xl fa fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<style>
+#text-part {
+    opacity: 0;
+    animation: fadeInText 1.5s ease-in both;
+    animation-delay: 0.1s;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -5%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+#studies-part {
+    opacity: 0;
+    animation: fadeInStudies 1.25s ease-in both;
+    animation-delay: 1s;
+}
+
+@keyframes fadeInStudies {
+    from {
+        opacity: 0;
+        transform: translate3d(-2%, 0%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+#skills-part {
+    opacity: 0;
+    animation: fadeInSkills 1.25s ease-in both;
+    animation-delay: 1.8s;
+}
+
+@keyframes fadeInSkills {
+    from {
+        opacity: 0;
+        transform: translate3d(-2%, 0%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+#text-network {
+    opacity: 0;
+    animation: fadeInNetwork 1.25s ease-in both;
+    animation-delay: 2.4s;
+}
+
+@keyframes fadeInNetwork {
+    from {
+        opacity: 0;
+        transform: translate3d(0%, -2%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+</style>
